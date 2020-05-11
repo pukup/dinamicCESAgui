@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root_vbox" alignment="CENTER" stylesheets="@css/CSS.css"
+      xmlns="http://javafx.com/javafx" fx:controller="cesa.view.Primary">
+    <children>
+        <MenuBar nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </MenuBar>
+        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox fx:id="rows_vbox" alignment="CENTER" spacing="30.0"/>
+            </content>
+        </ScrollPane>
+        <HBox prefHeight="0.0" prefWidth="1252.0" style="-fx-background-color: #3C3F41;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#openGrouping" styleClass="button-grey"
+                        text="Seleccionar grupo">
+                    <HBox.margin>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0"/>
+                    </HBox.margin>
+                </Button>
+                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#emergency" styleClass="button-emergency" text="!">
+                    <HBox.margin>
+                        <Insets bottom="3.0" top="3.0"/>
+                    </HBox.margin>
+                </Button>
+                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#zoomOut" styleClass="button-grey" text=" - ">
+                    <HBox.margin>
+                        <Insets bottom="6.0" top="6.0" right="6.0" left="6.0"/>
+                    </HBox.margin>
+                </Button>
+                <Slider fx:id="zoom_slider" blockIncrement="1.0" max="19.0" min="1.0" snapToTicks="true" value="10.0">
+                    <HBox.margin>
+                        <Insets bottom="6.0" top="12.0"/>
+                    </HBox.margin>
+                </Slider>
+                <Button mnemonicParsing="false" onAction="#zoomIn" styleClass="button-grey" text="+">
+                    <HBox.margin>
+                        <Insets bottom="6.0" top="6.0" right="6.0" left="6.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

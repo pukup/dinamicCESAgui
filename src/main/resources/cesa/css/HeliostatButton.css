@@ -1,0 +1,280 @@
+.pin {
+    -fx-shape: "M 0 0 L -4.454 -8.727 A 5 5 1 1 1 4.454 -8.727 L 0 0 z";
+}
+.pin:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.pin:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.hand {
+    -fx-shape: "M 325 575 Q 350 525 325 500 Q 275 450 250 375 L 250 275 C 250 200 300 225 300 275 L 300 350 Q 325 375 325 350 L 325 125 C 325 75 375 75 375 125 L 375 350 Q 400 375 400 350 L 400 75 C 400 25 450 25 450 75 L 450 350 Q 475 375 475 350 L 475 125 C 475 50 525 75 525 125 L 525 350 Q 525 375 550 350 L 550 175 C 550 100 600 150 600 175 L 600 350 Q 600 425 550 500 Q 525 525 550 575 L 325 575 ";
+}
+.hand:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.hand:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.cross{
+    -fx-shape: "M 375 275 L 250 375 L 275 400 L 400 300 L 525 400 L 550 375 L 425 275 L 550 175 L 525 150 L 400 250 L 275 150 L 250 175 L 375 275 ";
+}
+.cross:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.cross:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.shield{
+    -fx-shape: "M 440 320 Q 320 260 320 160 L 320 80 Q 380 120 440 80 Q 500 120 560 80 L 560 160 Q 560 260 440 320 ";
+}
+.shield:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.shield:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.zero{
+    -fx-shape: "M 400 300 Q 350 300 350 200 Q 350 100 400 100 Q 450 100 450 200 L 500 200 Q 500 50 400 50 Q 300 50 300 200 Q 300 350 400 350 Q 500 350 500 200 Q 475 200 450 200 Q 450 300 400 300 ";
+}
+.zero:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.zero:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.ground{
+    -fx-shape: "M 400 300 L 380 300 L 380 180 L 300 180 L 300 160 L 500 160 L 500 180 L 420 180 L 420 300 ";
+}
+.ground:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.ground:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.one{
+     -fx-shape: "M 420 320 L 260 320 L 260 280 L 320 280 L 320 100 L 260 100 L 300 60 L 360 60 L 360 280 L 420 280 L 420 320 ";
+}
+.one:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.one:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.two{
+     -fx-shape: "M 440 340 L 260 340 C 260 180 400 220 400 160 A 50 50 0 1 0 300 160 L 260 160 A 50 50 0 1 1 440 160 C 440 260 320 200 320 300 L 440 300 L 440 340 ";
+}
+.two:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.two:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.three{
+     -fx-shape: "M 340 260 L 350 240 A 50 50 0 1 0 370 160 L 370 140 A 50 50 0 1 0 350 60 L 340 40 A 50 50 0 1 1 430 150 A 50 50 0 1 1 340 260 ";
+}
+.three:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.three:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.four{
+     -fx-shape: "M 400 300 L 425 300 L 425 100 L 400 100 L 300 200 L 300 225 L 475 225 L 475 200 L 325 200 L 400 125 L 400 300 ";
+}
+.four:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.four:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.kilter{
+     -fx-shape: "M 425 350 L 375 350 L 375 75 L 425 75 L 400 125 Q 475 125 475 225 L 525 250 L 525 175 L 475 200 Q 475 300 400 300 L 425 350 ";
+}
+.kilter:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.kilter:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.triangle{
+    -fx-shape: "M150 0 L75 200 L225 200 Z";
+}
+.triangle:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.triangle:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.boiler{
+    -fx-shape: "M 400 150 C 450 200 350 250 350 300 Q 350 400 450 400 Q 550 400 550 300 C 550 250 500 200 400 150 ";
+}
+.boiler:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.boiler:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.focus{
+    -fx-shape: "M 375 350 L 375 275 Q 325 250 375 225 L 375 150 L 400 150 L 450 225 L 500 225 L 500 275 L 475 275 L 475 450 L 450 450 L 450 275 L 400 350 L 400 350 L 375 350 ";
+}
+.focus:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.focus:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.solar{
+    -fx-shape: "M 375 325 L 450 325 L 425 275 Q 525 275 525 200 L 575 225 L 575 150 L 525 175 Q 525 100 425 100 L 450 50 L 375 50 L 400 100 Q 300 100 300 175 L 250 150 L 250 225 L 300 200 Q 300 275 400 275 L 375 325 ";
+}
+.solar:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.solar:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.boil{
+    -fx-shape: "M 400 400 C 300 400 250 300 350 200 C 300 150 400 125 400 50 C 425 100 350 150 450 150 C 450 150 500 200 350 200 C 350 300 450 250 500 300 C 550 400 450 400 400 400 ";
+}
+.boil:hover {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.boil:selected:pressed {
+    -fx-background-color:
+        -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
+}
+.blue {
+    -fx-background-color: blue;
+}
+.green {
+    -fx-background-color: green;
+}
+.black {
+    -fx-background-color: black;
+}
+.violet {
+    -fx-background-color: violet;
+}
+.grey {
+    -fx-background-color: grey;
+}
+.red {
+    -fx-background-color: red;
+}
+.orange {
+    -fx-background-color: orange;
+}
+.yellow {
+    -fx-background-color: yellow;
+}
+.radius-green{
+    -fx-border-color: green;
+    -fx-border-width: 2;
+}
+.radius-yellow{
+    -fx-border-color: yellow;
+    -fx-border-width: 2;
+}
+.radius-red{
+    -fx-border-color: red;
+    -fx-border-width: 2;
+}
+.radius-black{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
