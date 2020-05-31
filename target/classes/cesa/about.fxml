@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@css/CSS.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+
+   <children>
+      <ImageView fitHeight="164.0" fitWidth="326.0" layoutX="141.0" layoutY="21.0" pickOnBounds="true">
+          <image>
+              <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/psa.png" />
+          </image>
+      </ImageView>
+      <TextField alignment="CENTER" editable="false" layoutX="212.0" layoutY="215.0" prefHeight="25.0" prefWidth="177.0" text="CESA Operation Manager" />
+      <TextField alignment="CENTER" editable="false" layoutX="240.0" layoutY="252.0" prefHeight="25.0" prefWidth="128.0" text="Almeria may 2020" />
+      <TextField alignment="CENTER" editable="false" layoutX="191.0" layoutY="308.0" prefHeight="25.0" prefWidth="226.0" text="Powered by open source software" />
+      <TextField alignment="CENTER" editable="false" layoutX="164.0" layoutY="354.0" prefHeight="25.0" prefWidth="274.0" text="Cross-Platform developement Uroz 2020" />
+   </children>
+</AnchorPane>

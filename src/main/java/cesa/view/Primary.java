@@ -3,6 +3,7 @@ package cesa.view;
 
 import cesa.App;
 import cesa.controller.ComLineController;
+import cesa.controller.HeliostatController;
 import cesa.controller.TimerCacheTask;
 import cesa.model.ComLine;
 import cesa.model.Heliostat;
@@ -84,6 +85,14 @@ public class Primary implements Initializable {
         stage.show();
     }
 
+    @FXML
+    private void about(ActionEvent event) throws IOException {
+        Scene scene = new Scene(loadFXML("about"));
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
     private Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
@@ -91,9 +100,20 @@ public class Primary implements Initializable {
 
     @FXML
     private void emergency() {
-        // The ones in focus must go to kilter focus throw aisle.
+        HeliostatController heliostatController = new HeliostatController();
+        for (Map.Entry<Integer, Row> integerRowEntry : rows.entrySet()) {
+            HashMap<Integer, Heliostat> heliostats = integerRowEntry.getValue().getComLine().getHeliostats();
+            for (Heliostat heliostat : heliostats.values()) {
+                heliostatController.command(heliostat.getComLineId(), heliostat.getId(), "a");
+            }
+        }
     }
 
+    @FXML
+    private void close() {
+        emergency();
+        System.exit(0);
+    }
 
     /**
      * It sets the GUI elements to represent the <code>Row</code> objects which are obtained from the server
@@ -107,7 +127,7 @@ public class Primary implements Initializable {
     }
 
     private Row createGUIHbox(ComLine comLine) {
-        Row row= new Row(comLine);
+        Row row = new Row(comLine);
         row.setSpacing(30.0);
         row.setAlignment(Pos.CENTER);
         createRegion(row);

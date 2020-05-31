@@ -213,7 +213,7 @@ public class Heliostat implements Serializable {
         StringBuilder state1 = new StringBuilder();
         int nibble1 = 0xf0 & state;
         if ((nibble1 & 0x00) == 0x00) {
-            state1.append(" ");
+            state1.append("");
         }
         if (((nibble1 & 0x10) == 0x10) || ((nibble1 & 0x20) == 0x20)) {
             state1.append("Consigna alcanzada");
@@ -237,7 +237,7 @@ public class Heliostat implements Serializable {
         int coupleBits0 = 0x3 & event;
         switch (coupleBits0) {
             case 0x0:
-                operation.append(" ");
+                operation.append("Remota");
                 break;
             case 0x1:
                 operation.append("Fuera de servicio");
@@ -259,7 +259,7 @@ public class Heliostat implements Serializable {
         int coupleBits1 = 0xc & event;
         switch (coupleBits1) {
             case 0x0:
-                security.append(" ");
+                security.append("OK");
                 break;
             case 0x4:
                 security.append("Código cliente erróneo");
@@ -300,7 +300,7 @@ public class Heliostat implements Serializable {
         int coupleBits3 = 0xc0 & event;
         switch (coupleBits3) {
             case 0x0:
-                controlLocal.append(" ");
+                controlLocal.append("OK");
                 break;
             case 0x40:
                 controlLocal.append("Fallo del micro esclavo");
@@ -347,7 +347,7 @@ public class Heliostat implements Serializable {
         int coupleBits1 = 0xc & diagnosisAZ;
         switch (coupleBits1) {
             case 0x0:
-                diagnosisAz1.append(" ");
+                diagnosisAz1.append("OK");
                 break;
             case 0x4:
                 diagnosisAz1.append("Fallo oscila");
@@ -369,7 +369,7 @@ public class Heliostat implements Serializable {
         int coupleBits2 = 0x30 & diagnosisAZ;
         switch (coupleBits2) {
             case 0x0:
-                diagnosisAz2.append(" ");
+                diagnosisAz2.append("OK");
                 break;
             case 0x10:
                 diagnosisAz2.append("Posición extrema oeste");
@@ -387,11 +387,11 @@ public class Heliostat implements Serializable {
      * @return diagnosis azimuth message.
      */
     public String diagnosisAz3ToString() {
-        StringBuilder diagnosisAz3 = new StringBuilder("Aviso ");
+        StringBuilder diagnosisAz3 = new StringBuilder();
         int coupleBits3 = 0xc0 & diagnosisAZ;
         switch (coupleBits3) {
             case 0x0:
-                diagnosisAz3.append(" ");
+                diagnosisAz3.append("Sin notificaciones");
                 break;
             case 0x40:
                 diagnosisAz3.append("Cero encontrado");
@@ -438,7 +438,7 @@ public class Heliostat implements Serializable {
         int coupleBits1 = 0xc & diagnosisEL;
         switch (coupleBits1) {
             case 0x0:
-                diagnosisEl1.append(" ");
+                diagnosisEl1.append("OK");
                 break;
             case 0x4:
                 diagnosisEl1.append("Fallo oscila");
@@ -460,7 +460,7 @@ public class Heliostat implements Serializable {
         int coupleBits2 = 0x30 & diagnosisEL;
         switch (coupleBits2) {
             case 0x0:
-                diagnosisEl2.append(" ");
+                diagnosisEl2.append("OK");
                 break;
             case 0x10:
                 diagnosisEl2.append("Posición extrema oeste");
@@ -478,11 +478,11 @@ public class Heliostat implements Serializable {
      * @return diagnosis elevation message.
      */
     public String diagnosisEl3ToString() {
-        StringBuilder diagnosisEl3 = new StringBuilder("");
+        StringBuilder diagnosisEl3 = new StringBuilder();
         int coupleBits3 = 0xc0 & diagnosisEL;
         switch (coupleBits3) {
             case 0x0:
-                diagnosisEl3.append(" ");
+                diagnosisEl3.append("Sin notificaciones");
                 break;
             case 0x40:
                 diagnosisEl3.append("Cero encontrado");
