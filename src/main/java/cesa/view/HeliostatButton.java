@@ -10,14 +10,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.TransferMode;
+import javafx.scene.input.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * It manages the <code>StyleClass</code> of buttons to change them according to <code>Heliostat</code> attributes values.
@@ -38,6 +37,8 @@ public class HeliostatButton extends VBox {
     TextArea textArea;
     @FXML
     private Button button;
+    @FXML
+    private Tooltip tooltip;
 
     private Heliostat heliostat;
 
@@ -49,7 +50,7 @@ public class HeliostatButton extends VBox {
         try {
             loadButton();
             heliostat = new Heliostat(comLineId);
-            Tooltip tooltip = new Tooltip(toolTip);
+            tooltip = new Tooltip(toolTip);
             Tooltip.install(button, tooltip);
             heliostatController = new HeliostatController();
         } catch (IOException exception) {
@@ -179,8 +180,13 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void getHour() {
-        tfDate.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
-        tfHour.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
+//        tfDate.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
+//        tfHour.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
+        SimpleDateFormat day= new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat hour= new SimpleDateFormat("HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        tfDate.setText(day.format(date));
+        tfHour.setText(hour.format(date));
     }
 
     @FXML
@@ -197,14 +203,12 @@ public class HeliostatButton extends VBox {
     private void setSkins() {
         setSkinState0();
         setSkinState1();
-        //        setSkinEventOperation();
-        //        setSkinEventSecurity();
         setSkinEventCom();
     }
 
     public void setValues() {
         if (valuesScene != null && valuesScene.getWindow().isShowing()) {
-            tfAddress.setText(this.getId());
+            tfAddress.setText(tooltip.getText());
             tfModbus.setText(String.format("%d - %d", heliostat.getComLineId(), heliostat.getId()));
             tfWarning.setText(heliostat.state1ToString());
             tfStatusCode.setText(heliostat.state0ToString());
@@ -329,35 +333,6 @@ public class HeliostatButton extends VBox {
         }
     }
 
-    //    /**
-    //     * Converts the two least significant bits from event byte to a string message.
-    //     *
-    //     * @return operation event message.
-    //     */
-    //    public void setSkinEventOperation() {
-    //        int coupleBits0 = 0x3 & heliostat.getEvent();
-    //        switch (coupleBits0) {
-    //            case 0x1:
-    //                //                Fuera de servicio
-    //                //                button.getStyleClass().add("");
-    //                break;
-    //            case 0x2:
-    //                //                Heliostato teleconfigurado
-    //                button.getStyleClass().set(3, "green");
-    //                break;
-    //        }
-    //    }
-
-    //    public void setSkinEventSecurity() {
-    //        int coupleBits1 = 0xc & heliostat.getEvent();
-    //        switch (coupleBits1) {
-    //            case 0x4:
-    //                //                  Código de cliente erróneo
-    //                button.getStyleClass().set(4, "violet");
-    //                break;
-    //        }
-    //    }
-
     public void setSkinEventCom() {
         int coupleBits2 = 0x30 & heliostat.getEvent();
         switch (coupleBits2) {
@@ -374,33 +349,4 @@ public class HeliostatButton extends VBox {
                 break;
         }
     }
-
-    //    private void tramp(){
-    //        tfAddress.setText(this.getId());
-    //        tfModbus.setText(String.format("%d - %d", heliostat.getComLineId(), heliostat.getId()));
-    //        tfWarning.setText("OK");
-    //        tfStatusCode.setText("Seguimiento solar");
-    //        tfOperation.setText("Remota");
-    //        tfSecurity.setText("OK");
-    //        tfCom.setText("En línea");
-    //        tfCL.setText("OK");
-    //        tfAz.setText("133");
-    //        tfEl.setText("57");
-    //        tfMotAz.setText("OK");
-    //        tfMotEl.setText("OK");
-    //        tfStatusReachedAz.setText("Consigna alcanzada");
-    //        tfStatusReachedEl.setText("Consigna alcanzada");
-    //        tfSwingAz.setText("OK");
-    //        tfSwingEl.setText("OK");
-    //        tfNotAz.setText("Ninguna");
-    //        tfNotEl.setText("Ninguna");
-    //        iEl1.setRotate(120);
-    //        iAz.setRotate(58);
-    //        tfDate.setText("25/04/2020");
-    //        tfHour.setText("06:37");
-    //        tfOffEl.setText("220");
-    //        tfOffAz.setText("-18");
-    //        tfAzB.setText("133");
-    //        tfElB.setText("57");
-    //    }
 }
