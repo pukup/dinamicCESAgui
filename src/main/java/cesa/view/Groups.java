@@ -11,7 +11,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 
@@ -20,32 +19,37 @@ import java.util.ResourceBundle;
 
 public class Groups implements Initializable {
 
-    @FXML
-    ImageView iEl1, iAz;
+
     @FXML
     ComboBox<Integer> cbFocus;
     @FXML
-    TextField tfAzB, tfElB, tfDate, tfHour;
+    TextField tfAzB, tfElB;
     @FXML
     TextArea textArea;
     @FXML
     private ListView listView;
     private HeliostatController heliostatController;
     private ObservableList<Heliostat> heliostats = FXCollections.observableArrayList();
+    private ObservableList<Heliostat> trackingList = FXCollections.observableArrayList();
+    private ObservableList<Heliostat> kilterList = FXCollections.observableArrayList();
+    private ObservableList<Heliostat> emergencyList = FXCollections.observableArrayList();
+    private ObservableList<Heliostat> focusList = FXCollections.observableArrayList();
+    private ObservableList<Heliostat> dejectionList = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 
     @FXML
     private void handleDrag(DragEvent dragEvent) {
         Dragboard db = dragEvent.getDragboard();
-        if (db.hasContent(Heliostat.DataFormat) && !heliostats.contains((Heliostat) db.getContent(Heliostat.DataFormat))) {
-            heliostats.add((Heliostat) db.getContent(Heliostat.DataFormat));
+        if (db.hasContent(Heliostat.DataFormat)) {
+            Heliostat heliostat = (Heliostat) db.getContent(Heliostat.DataFormat);
+            heliostats.add(heliostat);
             listView.setItems(heliostats);
             dragEvent.setDropCompleted(true);
         }
-        dragEvent.consume();
     }
 
     @FXML
@@ -93,9 +97,17 @@ public class Groups implements Initializable {
         command("s");
     }
 
-    private void command(String b) {
-        for (Heliostat heliostat : heliostats) {
-            textArea.appendText(heliostatController.command(heliostat.getComLineId(), heliostat.getId(), b) + "\n");
+    private void command(String s) {
+        try {
+            if (!heliostats.isEmpty())
+                for (Heliostat heliostat : heliostats) {
+                    textArea.appendText(heliostatController.command(heliostat.getComLineId(), heliostat.getId(), s) + "\n");
+                }
+            else {
+                Message.show("La lista de heliostatos esta vacia.");
+            }
+        } catch (Exception e) {
+            Message.show(e.toString());
         }
     }
 
@@ -112,19 +124,28 @@ public class Groups implements Initializable {
     }
 
     @FXML
-    private void getOffset() {
-    }
-
-    @FXML
-    private void setOffset() {
+    private void trackingList() {
 
     }
 
     @FXML
-    private void getHour() {
+    private void kilterList() {
+
     }
 
     @FXML
-    private void setHour() {
+    private void emergencyList() {
+
     }
+
+    @FXML
+    private void focusList() {
+
+    }
+
+    @FXML
+    private void dejectionList() {
+
+    }
+
 }

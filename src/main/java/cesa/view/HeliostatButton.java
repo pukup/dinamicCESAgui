@@ -10,7 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.*;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -180,10 +183,14 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void getHour() {
-//        tfDate.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
-//        tfHour.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
-        SimpleDateFormat day= new SimpleDateFormat("dd-MM-yyyy");
-        SimpleDateFormat hour= new SimpleDateFormat("HH:mm:ss");
+        //        String hour = heliostatController.getHour(heliostat.getComLineId(), heliostat.getId());
+        //        byte[] hourBytes = hour.getBytes();
+        //        tfHour.setText("" + hourBytes[3] / 256 + ":" + hourBytes[4] / 256 + ":" + hourBytes[5] / 256 + "" + hourBytes[6] / 256 + ":" + hourBytes[7]/256 + ":" + hourBytes[8]/256);
+        //        tfDate.setText("" + hourBytes[3] + ":" + hourBytes[4] + ":" + hourBytes[5] + "" + hourBytes[6]  + ":" + hourBytes[7] + ":" + hourBytes[8]);
+        //        String day = heliostatController.getDate(heliostat.getComLineId(), heliostat.getId());
+        //        tfDate.setText(String.format(hour, ""));
+        SimpleDateFormat day = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat hour = new SimpleDateFormat("HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
         tfDate.setText(day.format(date));
         tfHour.setText(hour.format(date));
@@ -191,6 +198,9 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void setHour() {
+        SimpleDateFormat day = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat hour = new SimpleDateFormat("HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
         heliostatController.setHour(heliostat.getComLineId(), heliostat.getId());
     }
 

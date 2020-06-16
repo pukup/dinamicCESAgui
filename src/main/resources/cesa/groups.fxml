@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.collections.FXCollections?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import java.lang.*?>
-<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0"
-      prefWidth="795.0" stylesheets="@css/CSS.css" xmlns="http://javafx.com/javafx"
-      fx:controller="cesa.view.Groups">
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="795.0" stylesheets="@css/CSS.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cesa.view.Groups">
     <Separator opacity="0.25" orientation="VERTICAL">
         <HBox.margin>
-            <Insets bottom="5.0" left="3.0" top="5.0"/>
+            <Insets bottom="5.0" left="3.0" top="5.0" />
         </HBox.margin>
     </Separator>
     <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
         <children>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets top="3.0"/>
+                    <Insets top="3.0" />
                 </VBox.margin>
             </Separator>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
@@ -27,38 +26,36 @@
                         <children>
                             <ImageView fitHeight="114.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                                 <VBox.margin>
-                                    <Insets/>
+                                    <Insets />
                                 </VBox.margin>
                                 <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/psa.png"/>
+                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/psa.png" />
                                 </image>
                             </ImageView>
-                            <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;"
-                                   text="CESAOpera">
+                            <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;" text="CESAOpera">
                                 <VBox.margin>
-                                    <Insets top="10.0"/>
+                                    <Insets top="10.0" />
                                 </VBox.margin>
                             </Label>
                         </children>
                         <HBox.margin>
-                            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0"/>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                         </HBox.margin>
                     </VBox>
-                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0"/>
+                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" />
                     <VBox HBox.hgrow="ALWAYS">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                         </HBox.margin>
                         <children>
-                            <ListView fx:id="listView" onDragOver="#handleDrag" prefHeight="166.0" prefWidth="650.0"
-                                      VBox.vgrow="ALWAYS"/>
+                            <ListView fx:id="listView" onDragOver="#handleDrag" prefHeight="166.0" prefWidth="650.0" VBox.vgrow="ALWAYS" />
                         </children>
                     </VBox>
                 </children>
             </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets/>
+                    <Insets />
                 </VBox.margin>
             </Separator>
             <HBox alignment="CENTER" prefHeight="219.0" prefWidth="732.0" VBox.vgrow="NEVER">
@@ -67,186 +64,192 @@
                         <children>
                             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#tracking" styleClass="button-grey"
-                                            text="Seguimiento">
+                                    <Button mnemonicParsing="false" onAction="#tracking" styleClass="button-grey" text="Seguimiento">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" onAction="#kilter" styleClass="button-grey"
-                                            text="Seguimiento desfasado">
+                                    <Button mnemonicParsing="false" onAction="#kilter" styleClass="button-grey" text="Seguimiento desfasado">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                             </HBox>
-                            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="100.0"
-                                  prefWidth="200.0">
+                            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#kilterAisle" styleClass="button-grey"
-                                            text="Seguimiento desfasado por pasillo">
+                                    <Button mnemonicParsing="false" onAction="#kilterAisle" styleClass="button-grey" text="Seguimiento desfasado por pasillo">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                             </HBox>
                             <HBox alignment="CENTER" layoutX="10.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#boiler" styleClass="button-grey"
-                                            text="Foco caldera">
+                                    <Button mnemonicParsing="false" onAction="#boiler" styleClass="button-grey" text="Foco caldera">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" onAction="#emergency" styleClass="button-grey"
-                                            text="Foco de emergencia">
+                                    <Button mnemonicParsing="false" onAction="#emergency" styleClass="button-grey" text="Foco de emergencia">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                             </HBox>
                             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#dejection" styleClass="button-grey"
-                                            text="Abatimiento">
+                                    <Button mnemonicParsing="false" onAction="#dejection" styleClass="button-grey" text="Abatimiento">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" onAction="#aisle" styleClass="button-grey"
-                                            text="Abatimiento por pasillo">
+                                    <Button mnemonicParsing="false" onAction="#aisle" styleClass="button-grey" text="Abatimiento por pasillo">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" top="10.0"/>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                                 <VBox.margin>
-                                    <Insets/>
+                                    <Insets />
                                 </VBox.margin>
                             </HBox>
-                            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="119.0"
-                                  prefHeight="100.0" prefWidth="200.0">
+                            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="119.0" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#immobilize" styleClass="button-grey"
-                                            text="Inmoviliza">
+                                    <Button mnemonicParsing="false" onAction="#immobilize" styleClass="button-grey" text="Inmoviliza">
                                         <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0"/>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" onAction="#outService" styleClass="button-grey"
-                                            text="Fuera de servicio">
+                                    <Button mnemonicParsing="false" onAction="#outService" styleClass="button-grey" text="Fuera de servicio">
                                         <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0"/>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                             </HBox>
                         </children>
                         <HBox.margin>
-                            <Insets/>
+                            <Insets />
                         </HBox.margin>
                     </VBox>
-                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" styleClass="button-grey"/>
-                    <AnchorPane prefHeight="162.0" prefWidth="216.0">
+                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" styleClass="button-grey" />
+               <VBox alignment="CENTER" prefHeight="250.0" prefWidth="50.0" HBox.hgrow="SOMETIMES">
+                  <children>
+                     <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
                         <children>
-                            <ImageView fx:id="iEl1" fitHeight="46.0" fitWidth="216.0" layoutY="87.0" pickOnBounds="true"
-                                       preserveRatio="true">
-                                <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl1.png"/>
-                                </image>
-                            </ImageView>
-                            <ImageView fitHeight="125.0" fitWidth="47.0" layoutX="72.0" layoutY="94.0"
-                                       pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl0.png"/>
-                                </image>
-                            </ImageView>
+                           <Button mnemonicParsing="false" onAction="#trackingList" styleClass="button-grey" text="Heliostatos en seguimiento - 0">
+                              <HBox.margin>
+                                 <Insets left="3.0" right="3.0" top="10.0" />
+                              </HBox.margin>
+                           </Button>
                         </children>
-                        <HBox.margin>
-                            <Insets left="10.0"/>
-                        </HBox.margin>
-                    </AnchorPane>
-                    <AnchorPane prefHeight="162.0" prefWidth="216.0">
+                     </HBox>
+                     <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
                         <children>
-                            <ImageView fx:id="iAz" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="35.0"
-                                       pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iAz.png"/>
-                                </image>
-                            </ImageView>
+                           <Button mnemonicParsing="false" onAction="#kilterList" styleClass="button-grey" text="Heliostatos en seguimiento desfasado - 0">
+                              <HBox.margin>
+                                 <Insets left="3.0" right="3.0" top="10.0" />
+                              </HBox.margin>
+                           </Button>
                         </children>
-                    </AnchorPane>
+                     </HBox>
+                     <HBox alignment="CENTER" layoutX="10.0" layoutY="86.0" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button mnemonicParsing="false" onAction="#emergencyList" styleClass="button-grey" text="Heliostatos en foco de emergencia - 0">
+                              <HBox.margin>
+                                 <Insets left="3.0" right="3.0" top="10.0" />
+                              </HBox.margin>
+                           </Button>
+                        </children>
+                     </HBox>
+                     <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="119.0" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button mnemonicParsing="false" onAction="#focusList" styleClass="button-grey" text="Heliostatos en foco - 0">
+                              <HBox.margin>
+                                 <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                              </HBox.margin>
+                           </Button>
+                        </children>
+                     </HBox>
+                     <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button mnemonicParsing="false" onAction="#dejectionList" styleClass="button-grey" text="Heliostatos en abatimiento - 0">
+                              <HBox.margin>
+                                 <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                              </HBox.margin>
+                           </Button>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
                 </children>
             </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets/>
+                    <Insets />
                 </VBox.margin>
             </Separator>
             <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="59.0" prefWidth="732.0" VBox.vgrow="NEVER">
                 <children>
-                    <ComboBox fx:id="cbFocus" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="334.0"
-                              promptText="Foco" HBox.hgrow="SOMETIMES">
+                    <ComboBox fx:id="cbFocus" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="334.0" promptText="Foco" HBox.hgrow="SOMETIMES">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
-                                <Integer fx:value="0"/>
-                                <Integer fx:value="1"/>
-                                <Integer fx:value="2"/>
-                                <Integer fx:value="3"/>
-                                <Integer fx:value="4"/>
-                                <Integer fx:value="5"/>
-                                <Integer fx:value="6"/>
-                                <Integer fx:value="7"/>
-                                <Integer fx:value="8"/>
-                                <Integer fx:value="9"/>
-                                <Integer fx:value="10"/>
-                                <Integer fx:value="11"/>
+                                <Integer fx:value="0" />
+                                <Integer fx:value="1" />
+                                <Integer fx:value="2" />
+                                <Integer fx:value="3" />
+                                <Integer fx:value="4" />
+                                <Integer fx:value="5" />
+                                <Integer fx:value="6" />
+                                <Integer fx:value="7" />
+                                <Integer fx:value="8" />
+                                <Integer fx:value="9" />
+                                <Integer fx:value="10" />
+                                <Integer fx:value="11" />
                             </FXCollections>
                         </items>
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </ComboBox>
-                    <Button mnemonicParsing="false" onAction="#setFocus" prefHeight="25.0" prefWidth="100.0"
-                            styleClass="button-grey" text="Establecer">
+                    <Button mnemonicParsing="false" onAction="#setFocus" prefHeight="25.0" prefWidth="100.0" styleClass="button-grey" text="Establecer">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </Button>
                     <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" styleClass="button-grey">
                         <HBox.margin>
-                            <Insets left="3.0" right="3.0"/>
+                            <Insets left="3.0" right="3.0" />
                         </HBox.margin>
                     </Separator>
                     <TextField fx:id="tfFocusX" prefHeight="25.0" prefWidth="43.0" promptText="X">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </TextField>
                     <TextField fx:id="tfFocusY" prefHeight="25.0" prefWidth="43.0" promptText="Y">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </TextField>
                     <TextField fx:id="tfFocusZ" prefHeight="25.0" prefWidth="43.0" promptText="Z">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </TextField>
-                    <Button mnemonicParsing="false" onAction="#newFocus" prefHeight="25.0" prefWidth="100.0"
-                            styleClass="button-grey" text="Definir">
+                    <Button mnemonicParsing="false" onAction="#newFocus" prefHeight="25.0" prefWidth="100.0" styleClass="button-grey" text="Definir">
                         <HBox.margin>
-                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0"/>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
                         </HBox.margin>
                     </Button>
                 </children>
             </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets/>
+                    <Insets />
                 </VBox.margin>
             </Separator>
             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
@@ -255,112 +258,60 @@
                         <children>
                             <Label text="Azimut">
                                 <VBox.margin>
-                                    <Insets/>
+                                    <Insets />
                                 </VBox.margin>
                             </Label>
-                            <TextField fx:id="tfAzB" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0"/>
+                            <TextField fx:id="tfAzB" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
                             <!--                            fx:id="tfAz"-->
                             <Label text="Elevacion">
                                 <VBox.margin>
-                                    <Insets top="10.0"/>
+                                    <Insets top="10.0" />
                                 </VBox.margin>
                             </Label>
-                            <TextField fx:id="tfElB" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0"/>
+                            <TextField fx:id="tfElB" alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
                             <!--                            fx:id="tfEl"-->
                             <HBox alignment="CENTER">
                                 <children>
-                                    <Button mnemonicParsing="false" onAction="#setAzEl" prefHeight="25.0"
-                                            prefWidth="147.0" styleClass="button-grey" text="Ajustar">
+                                    <Button mnemonicParsing="false" onAction="#setAzEl" prefHeight="25.0" prefWidth="147.0" styleClass="button-grey" text="Ajustar">
                                         <HBox.margin>
-                                            <Insets top="5.0"/>
+                                            <Insets top="5.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                                 <VBox.margin>
-                                    <Insets top="5.0"/>
+                                    <Insets top="5.0" />
                                 </VBox.margin>
                             </HBox>
                         </children>
                         <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-                        </HBox.margin>
-                    </VBox>
-                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0">
-                        <HBox.margin>
-                            <Insets left="3.0" right="3.0"/>
-                        </HBox.margin>
-                    </Separator>
-                    <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                        <children>
-                            <Label text="Fecha">
-                                <VBox.margin>
-                                    <Insets/>
-                                </VBox.margin>
-                            </Label>
-                            <TextField fx:id="tfDate" alignment="TOP_RIGHT" editable="false" prefHeight="28.0"
-                                       prefWidth="150.0"/>
-                            <Label text="Hora">
-                                <VBox.margin>
-                                    <Insets top="10.0"/>
-                                </VBox.margin>
-                            </Label>
-                            <TextField fx:id="tfHour" alignment="TOP_RIGHT" editable="false" prefHeight="28.0"
-                                       prefWidth="150.0"/>
-                            <HBox alignment="BOTTOM_CENTER">
-                                <VBox.margin>
-                                    <Insets top="5.0"/>
-                                </VBox.margin>
-                            </HBox>
-                            <HBox alignment="BOTTOM_CENTER">
-                                <children>
-                                    <Button mnemonicParsing="false" onAction="#getHour" prefHeight="25.0"
-                                            prefWidth="88.0" styleClass="button-grey" text="Obtener">
-                                        <HBox.margin>
-                                            <Insets right="3.0" top="5.0"/>
-                                        </HBox.margin>
-                                    </Button>
-                                    <Button mnemonicParsing="false" onAction="#setHour" prefHeight="25.0"
-                                            prefWidth="88.0" styleClass="button-grey" text="Fijar">
-                                        <HBox.margin>
-                                            <Insets left="3.0" top="5.0"/>
-                                        </HBox.margin>
-                                    </Button>
-                                </children>
-                                <VBox.margin>
-                                    <Insets/>
-                                </VBox.margin>
-                            </HBox>
-                        </children>
-                        <HBox.margin>
-                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                         </HBox.margin>
                     </VBox>
                 </children>
             </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets/>
+                    <Insets />
                 </VBox.margin>
             </Separator>
             <VBox prefHeight="79.0" prefWidth="767.0" VBox.vgrow="ALWAYS">
                 <children>
-                    <TextArea fx:id="textArea" editable="false" prefHeight="78.0" prefWidth="767.0"
-                              VBox.vgrow="ALWAYS"/>
+                    <TextArea fx:id="textArea" editable="false" prefHeight="78.0" prefWidth="767.0" VBox.vgrow="ALWAYS" />
                 </children>
                 <VBox.margin>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </VBox.margin>
             </VBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
-                    <Insets bottom="3.0"/>
+                    <Insets bottom="3.0" />
                 </VBox.margin>
             </Separator>
         </children>
     </VBox>
     <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0">
         <HBox.margin>
-            <Insets bottom="5.0" right="3.0" top="5.0"/>
+            <Insets bottom="5.0" right="3.0" top="5.0" />
         </HBox.margin>
     </Separator>
 </HBox>

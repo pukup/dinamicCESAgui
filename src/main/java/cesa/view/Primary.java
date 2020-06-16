@@ -39,6 +39,11 @@ public class Primary implements Initializable {
 
     private TimerCacheTask timerCacheTask;
     private HashMap<Integer, Row> rows;
+    private Heliostat[] trackingList = new Heliostat[]{};
+    private Heliostat[] kilterList = new Heliostat[]{};
+    private Heliostat[] emergencyList = new Heliostat[]{};
+    private Heliostat[] focusList = new Heliostat[]{};
+    private Heliostat[] dejectionList = new Heliostat[]{};
 
     @FXML
     private VBox rows_vbox;

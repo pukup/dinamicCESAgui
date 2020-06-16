@@ -32,6 +32,7 @@
     -fx-background-color: linear-gradient(#1B303E, #2C4D64);
     -fx-text-fill:white;
     -fx-font-size:12px;
+    -fx-alignment:top-left;
 }
 .combo-box{
     -fx-border-color: white;
