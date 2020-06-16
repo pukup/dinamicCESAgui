@@ -237,13 +237,13 @@ public class Heliostat implements Serializable {
         int coupleBits0 = 0x3 & event;
         switch (coupleBits0) {
             case 0x0:
-                operation.append("Remota");
+                operation.append("remota");
                 break;
             case 0x1:
-                operation.append("Fuera de servicio");
+                operation.append("fuera de servicio");
                 break;
             case 0x2:
-                operation.append("Heliostato teleconfigurado");
+                operation.append("heliostato teleconfigurado");
                 break;
         }
         return operation.toString();
@@ -278,13 +278,13 @@ public class Heliostat implements Serializable {
         int coupleBits2 = 0x30 & event;
         switch (coupleBits2) {
             case 0x0:
-                communications.append("En línea");
+                communications.append("en línea");
                 break;
             case 0x10:
-                communications.append("Fallo");
+                communications.append("con fallo");
                 break;
             case 0x20:
-                communications.append("No acpeta comando");
+                communications.append("no acpeta comando");
                 break;
         }
         return communications.toString();
@@ -300,13 +300,13 @@ public class Heliostat implements Serializable {
         int coupleBits3 = 0xc0 & event;
         switch (coupleBits3) {
             case 0x0:
-                controlLocal.append("OK");
+                controlLocal.append("sin fallo");
                 break;
             case 0x40:
-                controlLocal.append("Fallo del micro esclavo");
+                controlLocal.append("fallo del micro esclavo");
                 break;
             case 0x80:
-                controlLocal.append("Fallo batería");
+                controlLocal.append("fallo batería");
                 break;
         }
         return controlLocal.toString();
@@ -319,7 +319,7 @@ public class Heliostat implements Serializable {
      */
     public String diagnosisAz0ToString() {
         StringBuilder diagnosisAz0 = new StringBuilder();
-        int coupleBits0 = 0x3 & diagnosisAZ;
+        int coupleBits0 = 0x03 & diagnosisAZ;
         switch (coupleBits0) {
             case 0x0:
                 diagnosisAz0.append(" ");
@@ -344,7 +344,7 @@ public class Heliostat implements Serializable {
      */
     public String diagnosisAz1ToString() {
         StringBuilder diagnosisAz1 = new StringBuilder();
-        int coupleBits1 = 0xc & diagnosisAZ;
+        int coupleBits1 = 0x0c & diagnosisAZ;
         switch (coupleBits1) {
             case 0x0:
                 diagnosisAz1.append("OK");
@@ -410,7 +410,7 @@ public class Heliostat implements Serializable {
      */
     public String diagnosisEl0ToString() {
         StringBuilder diagnosisEl0 = new StringBuilder();
-        int coupleBits0 = 0x3 & diagnosisEL;
+        int coupleBits0 = 0x03 & diagnosisEL;
         switch (coupleBits0) {
             case 0x0:
                 diagnosisEl0.append(" ");
@@ -435,7 +435,7 @@ public class Heliostat implements Serializable {
      */
     public String diagnosisEl1ToString() {
         StringBuilder diagnosisEl1 = new StringBuilder();
-        int coupleBits1 = 0xc & diagnosisEL;
+        int coupleBits1 = 0x0c & diagnosisEL;
         switch (coupleBits1) {
             case 0x0:
                 diagnosisEl1.append("OK");
@@ -496,6 +496,7 @@ public class Heliostat implements Serializable {
 
     @Override
     public String toString() {
-        return String.format(" %x - %x:  %s, Az:%x El:%x, %s, %s", comLineId, id, state0ToString(), positionAZ, positionEL, state1ToString(), eventOperationToString());
+        return String.format(" %d - %d:  %s, azimut:%d, elevación:%d, operación %s, comunicación %s, control local %s.", comLineId, id, state0ToString(), positionAZ, positionEL, eventOperationToString(), eventComToString(), eventCLToString());
     }
+
 }
