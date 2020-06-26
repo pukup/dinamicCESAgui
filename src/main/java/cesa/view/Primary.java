@@ -84,7 +84,7 @@ public class Primary implements Initializable {
 
     @FXML
     private void openGrouping(ActionEvent event) throws IOException {
-        Scene scene = new Scene(loadFXML("groups"));
+        Scene scene = new Scene(loadFXML("fxml/groups.fxml"));
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
@@ -92,14 +92,14 @@ public class Primary implements Initializable {
 
     @FXML
     private void about(ActionEvent event) throws IOException {
-        Scene scene = new Scene(loadFXML("about"));
+        Scene scene = new Scene(loadFXML("fxml/about.fxml"));
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
     }
 
     private Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml));
         return fxmlLoader.load();
     }
 
@@ -169,7 +169,9 @@ public class Primary implements Initializable {
 
     public void refresRows() {
         for (Map.Entry<Integer, Row> integerRowEntry : rows.entrySet()) {
-            integerRowEntry.getValue().getComLine().setAttributes(ComLineController.getAPICache(integerRowEntry.getKey()));
+            ComLine comLine = integerRowEntry.getValue().getComLine();
+            comLine.setAttributes(ComLineController.getAPICache(integerRowEntry.getKey()));
+            comLine.setAttributes(ComLineController.getAPICache(comLine.getId()));
             HashMap<Integer, HeliostatButton> heliostatButtonHashMap = integerRowEntry.getValue().getIntegerHeliostatButtonHashMap();
             for (Map.Entry<Integer, HeliostatButton> integerHeliostatButtontEntry : heliostatButtonHashMap.entrySet()) {
                 integerHeliostatButtontEntry.getValue().refreshHeliostat(integerRowEntry.getValue().getComLine().getHeliostats().get(integerHeliostatButtontEntry.getKey()));

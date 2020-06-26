@@ -7,7 +7,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="795.0" stylesheets="@css/CSS.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="795.0" stylesheets="@../css/CSS.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <Separator opacity="0.25" orientation="VERTICAL">
         <HBox.margin>
             <Insets bottom="5.0" left="3.0" top="5.0" />
@@ -29,7 +29,7 @@
                                     <Insets />
                                 </VBox.margin>
                                 <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/psa.png" />
+                                    <Image url="@../images/psa.png" />
                                 </image>
                             </ImageView>
                             <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;" text="CESAOpera">
@@ -354,12 +354,12 @@
                         <children>
                             <ImageView fx:id="iEl1" fitHeight="46.0" fitWidth="216.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl1.png" />
+                                    <Image url="@../images/iEl1.png" />
                                 </image>
                             </ImageView>
                             <ImageView fitHeight="125.0" fitWidth="47.0" layoutX="72.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl0.png" />
+                                    <Image url="@../images/iEl0.png" />
                                 </image>
                             </ImageView>
                         </children>
@@ -371,7 +371,7 @@
                         <children>
                             <ImageView fx:id="iAz" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
-                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iAz.png" />
+                                    <Image url="@../images/iAz.png" />
                                 </image>
                             </ImageView>
                         </children>

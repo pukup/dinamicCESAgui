@@ -278,3 +278,7 @@
     -fx-border-color: black;
     -fx-border-width: 2;
 }
+.radius-pink{
+    -fx-border-color: pink;
+    -fx-border-width: 2;
+}

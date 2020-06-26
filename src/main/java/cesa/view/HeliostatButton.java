@@ -62,7 +62,7 @@ public class HeliostatButton extends VBox {
     }
 
     private void loadButton() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("heliostatButton.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/heliostatButton.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         fxmlLoader.load();
@@ -70,7 +70,7 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void openValues(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("values.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/values.fxml"));
         fxmlLoader.setController(this);
         valuesScene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
